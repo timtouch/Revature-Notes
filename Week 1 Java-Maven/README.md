@@ -121,25 +121,25 @@
   - Setting the value
 
 1. **static/class/"global"**
-  - Shared values between all instances of a class
+    - Shared values between all instances of a class
 2. **instance/object**
-  - The variable exists as long as the object exists
-  - The variable is unique to each object
+    - The variable exists as long as the object exists
+    - The variable is unique to each object
 3. **method/local**
-  - Lives and dies within the scope of that method
+    - Lives and dies within the scope of that method
 4. **block/loop**
-  - Exists within the curly braces, `{}` such as when using for-loops
+    - Exists within the curly braces, `{}` such as when using for-loops
 
 ##### Access Modifiers
 - You can control what other classes have access to this class's variables and methods
 1. **Private**
-  - Only other methods and variable within that class can access it, not even child classes.
+    - Only other methods and variable within that class can access it, not even child classes.
 2. **(default)**
-  - Extends permission to classes within the same package
+    - Extends permission to classes within the same package
 3. **Protected**
-  - Further extends permission to child classes outside of the package
+    - Further extends permission to child classes outside of the package
 4. **Public**
-  - Extends permission to everyone
+    - Extends permission to everyone
 
 #### Arrays
   - A sequential list of values in memory such that they can be access by incrementing from the 0th index by **index x sizeOfValue**
@@ -190,7 +190,7 @@
         - like `git pull` but doesn't merge the changes
       - `git clone`
         - when you don't have
-- pull before you push
+- *Pull before you push*
 
 
 ## Collections API
