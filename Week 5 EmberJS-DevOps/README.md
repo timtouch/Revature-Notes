@@ -1,0 +1,292 @@
+### JRE
+- JVM + javalibs
+
+### NodeJS
+- JS RuntimeEnvironment
+    - JS Interpreter + libs
+
+-> for servers or for development frameworks
+    - Frameworks that frontend developers can use as tools to make things easier
+
+- npm: node package management
+    - package management
+        - a centralized way of having repositories and managing them
+        - we can install the packages with `npm install {package}`
+    - install ember-cli
+        - Used to build a project in Ember.js
+    - you can bundle your project to make it more portable
+---
+# Ember.js
+- framework for building "Ambitious" web apps.
+- Old way
+    - Client <--> Server
+        - Constant exchange for new resources
+- New way
+    - Server gives client all that they need to run the app
+    - If the client needs to update something, they can occasional talk to the server
+    - Seems like a lot of data to load each time, but we cache it so every time we visit, it loads faster
+## MVC (Model-View-Controller)
+- About separation of concerns
+    - Model
+        - Stores the data and maintains the state of the object
+    - View
+        - In charge of how to display the data in the model
+    - Controller
+        - The "glue" that pulls the Model and View together
+            - If the model changes, so does the view and vice versa
+        - It is your business logic/service layer
+
+## Ember objects
+### Router
+- It's job is to bring all the moving parts together
+- Has multiple routes
+    - **Route**
+        - The individual view or section that you define
+        - A particular view that you want to present to the user
+        - route properties
+            - **model** *
+            - **controller** *
+                - Handling things like event handling
+            - helper
+                - Kind of like a controller but for helper methods
+            - service
+                - Reuse logic in more that one route
+            - **template** *
+                - The equivalent to your view
+                - A reusable section of code
+### Data-binding
+#### Ember expressions
+- `{{varName}}`
+    - Handlebars.js
+
+## npm
+- [npm repository](https://www.npmjs.com/)
+- `npm install -g packagename@versionnumber`
+    - -g option to install globally
+    - version number after @ symbol
+- Packages we need:
+    - bower
+    - ember-cli
+- Create a new ember project
+    - `ember new projectName`
+- `bower install packageName -sa`
+    -whats -sa?
+
+## Ember Project
+- package.json
+- Build/Start project command
+    - `ember serve`
+        - `ember s` as a short hand
+- `/dist` folder is like our target folder for java
+- Generate route
+    - `ember generate route routeName`
+- Environment Variable
+     - In `environment.js`
+
+- \*.hbs (handlebars)
+    - Where we can have some html content
+-`app.js`
+    - The heart of our project
+    - Handles everything but we shouldn't need to touch on this
+-`ember g model modelname`
+    - generate model
+### Model
+### Route
+### Adapter
+### Serializer
+
+### .hbs
+- `{{outlet}}`
+- `{{input value}}`
+### ember-cli-build
+- can add things like bootstrap
+
+### Useful Ember js resources
+- [Ember](https://www.emberjs.com/)
+- [Ember Twiddle](ember-twiddle.com)
+
+### Possible Question for 1-on-1
+- What would you do to migrate your project to Ember.js?
+---
+# DevOps
+
+> DevOps integrates developers and operations teams in order to improve collaboration and productivity by automating infrastructure , automating workflows and continuously measuring application performance
+
+- A combination of Developer and Operator roles
+    - Sharing responsibilities between the Developers and Operators
+- It's a culture, a mindset, a meme
+- You want to deploy production code ASAP.
+- By writing small chunks of code, it increases allows one to increase the frequency of deployments
+- Improves ability to adapt to changing demands or occurring bugs
+- Need a Source Control System to help manage, track and document all of the changes to both the application code and configuration management code.
+## Benefits of DevOps
+- Faster time to market
+    - Adds a competitive advantage
+- More focus on improving the business
+
+## In the End
+- Innovate faster
+- More responsive to business needs
+- Better collaboration
+- Better quality
+- More frequent releases
+
+## Automation
+- Automate Code Testing
+- Automate Workflows
+- Automate Infrastructure
+- Automate Everything
+
+## Continuous Integration
+- How would you coordinate with other project members?
+    - You'd have a central git repository
+    - Sometimes, code may only work on your machine, but not your other teammates
+        - Have a **build server** that will build the actually project and then deploy it. It is the arbiter to make sure that a developer's environment doesn't affect the building of the code.
+    - If you rebuild after every commit, you can find exactly when it broke, what broke, and who broke it.
+- By always pushing new builds and testing after each build, we can make sure that our code is always...{Fill this in}
+- You can have a separate server to make sure the coding styles are consistent between developers
+
+## Continuous Delivery
+- Not enough to build a properly working .jar file, assure that it is always in a deployable state
+- Testing server
+    - for different environments
+- QA server
+    - dummy version
+    - What do they think of how it looks?
+- Staging
+    - Production
+
+## DevOps history
+- Old way of software development
+    1. Have a client who talks with the project manager to give their requirements
+    2. Project manager passes these requirements to the programmers
+    3. Programmers will take time to build the software and once it's complete, show it to the client.
+    4. The client may be unhappy about the result or the result is buggy so back to step 3.
+    5. Operations - has to handle the setup of the product and make sure that the business won't be down because of the new product.
+        - system admins
+        - infrastructure
+        - delivery
+- **Agile**
+    - 2 wk sprints
+    - constant contact w/ client
+    - rapid turnaround
+
+
+## Linux
+- You want a stable place that doesn't take a ton of resources to run your application.
+- fork on UNIX
+- kernel developed by Linus Torvalds
+    - What is a kernel?
+        - Takes commands of software to commands of hardware.
+- GNU project
+    - The university had tools and libraries but no kernel.
+    + so they combines the GNU library with the Linux kernel which becomes the Linux OS
+
+### Distros (Distributions)
+- Ubuntu
+- Red Hat Enterprise Linux
+    - Big is US
+    - Enterprise servers is not free since companies have to pay for support
+- OpenSuse
+    - Big in Europe
+- What do the Enterprise versions have that the normal ones don't?
+    - All their software packages are in the old but stable versions.
+    - Has a certain setup for network configurations
+
+#### Why host on Linux?
+- It's free
+- stable
+- low resource usage
+- easy/versatile configuration
+- package management
+    - You can batch install or batch update software
+
+#### Everything is a file in Linux
+- folder is a text file that lists/links other folders/files
+- application configurations are in text files
+- every file is either *plain text* or *binary code*
+
+### How to get into a Headless Linux Server
+- Headless server
+    - There is no direct way of interacting with the server.
+        - It's just a box, sitting in a warehouse.
+    - Simply a server that is hosted somewhere that you remotely connect to.
+        - Usually without a desktop environment
+        - Usually with only a terminal
+    - ssh (secure shell)
+        - secure connection to another computer
+        - shell: a virtual interpreter/terminal emulator
+            - A program that interprets your commands...and more. I should add more
+    - bash: borne again shell
+### Linux Commands
+- `pwd`
+- `cd [directory]`
+    -  `~`
+    - `/`
+- `ls -la`
+    - `-a`
+        - Shows all hidden files and directories as well
+- `ssh`
+- `scp`
+    - For transferring files from
+    - `scp -i location/of/pem/file /location/of/webapp/target/webapp.war ec2-user@ip.address:/home/ec2-user/apache-tomee-plume-7.0.4/webapps`
+#### Bash stuff
+- `#!/bin/bash[sh]`
+- `echo "I'm in $PWD"`
+    - This $PWD is a variable
+- `echo "I'm in $(pwd)"`
+    - This $(pwd) is a sub-shell that runs and returns a value
+- `>`
+    - Output
+- `<< EOF`
+    - Input until EOF
+- `2` is the error channel, system err out
+- `rm` or `rmdir` to remove files or directories
+    - `-r` to remove recursively, `-f` to forcibly remove
+- Bash Functions
+    - `hello () {echo "Hello",  $1;}`
+    - `mkcd() { mkdir -p "$1" && cd "$1"; }`
+    - Beware of spaces
+- `less`
+- `tail`
+    - `-n` number of lines
+- `head`
+- .bash_profile has the setup for configuration
+- .bashrc
+- .bash_history has the history of commands of the last session
+- `sudo yum install -y`
+- `curl`
+- `wget`
+    - For downloading
+### Folders
+- `bin`, `user`, `var` are for scripts
+### Terminal shortcuts
+- `Ctrl + l` clears the screen
+- `Ctrl + a` brings cursor to the start of the string
+
+### EC2
+- They are just virtual machines
+- But they have these cool features:
+    - **Elastic Block Store**
+        - A hard drive that is readable by any computer
+        - Kind of like an external hard drive
+    - **Security Groups**
+        - Manage your inbound and outbound rules
+    - **Elastic Load Balancer (ELB)**
+        - Balance the load of the network between servers evenly
+        - Stands between the client and the EC2 instances
+    - **Auto Scaling Groups**
+        - You want to scale your resources dynamically such that you use only as much as you need to.
+            - Scales turning on/off servers as demand changes
+
+### Deploying to AWS
+- Make sure your security group
+- `chromd` -timed execution of scripts
+
+## Jenkins
+- A CI Automation tool
+- We can have a dedicated server for Jenkins or have it on the same server
+
+### Plugins
+- Deploy to Container
+- Maven Integration
