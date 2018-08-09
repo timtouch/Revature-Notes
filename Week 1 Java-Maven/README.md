@@ -42,7 +42,7 @@
     - Where you take the important details of the object to model it.
     - Where you conceptualize and try to represent the important details of that object, ignoring the irrelevant (to the user) details
 - **Encapsulation**
-  - Short Answer (Protecting Date)
+  - Short Answer (Protecting Data)
   - Long Answer
     - The object wants to maintain its own state (the current values of the properties of the object). It is responsible for its own state. No other objects should be able to directly manipulating its state.
 - **Inheritance**
