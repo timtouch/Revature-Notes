@@ -278,7 +278,16 @@
     - **Auto Scaling Groups**
         - You want to scale your resources dynamically such that you use only as much as you need to.
             - Scales turning on/off servers as demand changes
-
+## Ubuntu things
+- There are many ways to download and install Java and other things to our
+    - Manually
+    - Adding a repository for our software package manager
+- `/opt/` is where you want to store your installation files
+- `etc/environment` is where you want to add global environment variables
+- `CATALINA_HOME`
+- `JAVA_HOME`
+- `M2_HOME`
+- `M2=$M2_HOME/bin`
 ### Deploying to AWS
 - Make sure your security group
 - `chromd` -timed execution of scripts
@@ -286,7 +295,16 @@
 ## Jenkins
 - A CI Automation tool
 - We can have a dedicated server for Jenkins or have it on the same server
-
+- Acces Token for Github:  9a87dc1c18f4f4c7847b9b0e0d03f4a14d83d5fb
+- Install the maven to where Jenkins can see it
+    - *If it doesn't work, sudo it*
+    - `sudo /opt/apache-maven-3.5.4/bin/mvn install:install-file -Dfile=ojdbc8-12.0.1.jar -DgroupId="com.oracle.jdbc" -DartifactId="ojdbc8" -Dversion=12.0.1 -Dpackaging=jar
+    `
 ### Plugins
 - Deploy to Container
 - Maven Integration
+
+### Jenkins
+- Global Tools Configuration
+    - To setup what env var you need
+- Problem with wifi, mess with Global Security, crumbs, proxy (CSRF Protection)

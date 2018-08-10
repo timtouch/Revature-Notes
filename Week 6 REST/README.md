@@ -29,15 +29,7 @@
 - In a REST service, it could give you code that you can run.
 
 ## SOAP (Simple Object Access Protocol)
-- Get a decent understanding about it- Have endpoints that make sense to people
-    - GET
-        - Retrieve the data
-    - POST
-        - Add/Update the data
-    - PUT
-        - Update the data
-    - DELETE
-        - Delete the data
+- Get a decent understanding about it
 
 ### Terminology
 - SoA
