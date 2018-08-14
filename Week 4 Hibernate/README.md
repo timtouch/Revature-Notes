@@ -62,7 +62,8 @@
 5. You can use the Session object to manage transactions
 
 ###  [Hibernate object states](https://docs.jboss.org/hibernate/orm/3.3/reference/en-US/html/objectstate.html)
-Hibernate is always listening for changes to the objects persisted
+Hibernate is always listening for changes to the objects persisted:
+![Hibernate Object States](https://www.baeldung.com/wp-content/uploads/2016/07/2016-07-11_13-38-11-1024x551.png)
 - Transient
     - The object has just been instantiated using the `new` operator and not associated with a Hibernate `Session`
     - Not "attached" to a row in the database
@@ -120,6 +121,21 @@ Hibernate is always listening for changes to the objects persisted
         - Taking a query and then using Java to slice up a query into whatever you want
     - object-oriented criteria queries
 
+### Hibernate Annotations
+- `@Entity`
+
+- `@Table(name ="TABLE_NAME")`
+- `@Id`
+- `@GeneratedValue(strategy =  GenerationType.SEQUENCE, generator = "nameOfSeq")`
+- `@SequenceGenerator(allocationSize = 1, name = "nameOfSeq", sequenceName = "NAME_OF_SEQ_IN_TABLE_SEQ")`
+- `@Column(name = "COLUMN_NAME)`
+- `@Enumerated(EnumType.STRING)`
+- `@ManyToOne, @ManyToMany, @OneToOne, @OneToMany`
+- `@JoinColumn(name = "FK_NAME")`
+- `@AttributeOverrides`
+    - `@AttributeOverride(name="nameOfProperty", column=@Column(name = "NEW_NAME"))`
+- `@NamedQueries`
+    - `@NamedQuery`
 ##### Convention over configuration
 - Because there are certain conventions for writing code or databases, we don't have to worry about configuration
 

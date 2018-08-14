@@ -36,7 +36,7 @@
         - Brute force it, then talk about how you'd improve that
     - Talk about how you'd do it from a high level
         - Show the entire thing from front to back
-- How did you $TECHNOLOGY in the project?
+- How did you use $TECHNOLOGY in the project?
     - Talk about what you used it for and how you used it. Talk about $TECHNOLOGY as if you are teaching it.
     - Should be able to discuss about different frameworks
 - Video Call
@@ -45,9 +45,11 @@
     - Treat it like it's a face to face interview
     - Ask them if the sound and video is okay
     - Have a nice, clean, quiet place to have the interview
+
 ### Tips for speaking with a full voice
-    - Try singing to help open up your voice
-    - Air in your lungs, ping pong ball in your mouth, have your words circulate (reverberate) in that area.
+- Try singing to help open up your voice
+- Air in your lungs, ping pong ball in your mouth, have your words circulate (reverberate) in that area.
+---
 ## Project 1 feedback for class
 - Dabble more into CSS
     - Learn more about design
@@ -78,8 +80,36 @@
 ### Code debit
 *How much time would it take someone to go through your code base and fix all the bugs and all the code smells?*
 - Every time you write code, you are adding to the code debit
-
+---
 # JP Morgan (Research)
-- CIB (Corporate investment banking)
-    - Banking Technology (part of the **CIB vertical**)
-- How do the teams work? What kind of technologies do they use?
+- What kind of projects would we work on?
+    - CIB (Corporate & investment banking)
+        - Banking Technology (part of the **CIB vertical**)
+        - What exactly is Corporate & Investment Banking?
+- What was the most interesting and most challenging project you've worked on?
+- What have you learned since working the company?
+- What do you enjoy most about working at JP Morgan?
+- How do the teams work?
+    - What is the work flow like?
+    - What kind of software methodology do you use? (Agile,Scrum)
+- Does the company have a mentoring policy?
+- What kind of technologies do they use?
+    - Why Ember/Cassandra?
+- What kind of challenges does your company try to overcome/solve?
+- What made you guys look at Revature for hiring talent?
+
+## What do they want?
+- Someone quick to learn
+- Someone flexible, never set in certain ways of doing things
+- Someone passionate about coding and proud about what they wrote
+
+## JP Morgan For Next Time
+- They will review your code.
+    - Make sure you write clean, elegant code
+    - Get ready to defend yourself
+- Have a likeable personality
+- We will have an hour long interview with them.
+
+
+## Project 3
+- All about inheriting a large code base and all the problems that come along with it

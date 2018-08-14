@@ -16,7 +16,6 @@
     - Stack and Heap
       - Stack keeps track of function call chains and context values such as object references
       - Heap contains the actual object
-
     - Distributed across several systems
     - Virtual Machines
       - Taking bits and pieces of that hardware and combining it virtually for it's own use as it's own hardware
@@ -197,7 +196,8 @@
 ![Collections API](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2017/05/Collection-framework-hierarchy.png)
 
 #### Multi-threading
--
+- Why would you want multi-threading?
+    - Computers have multiple processors. Single threaded applications only utilize one of them. But multi-thread applications can utilize all of them. This also makes the application much more scalable.
 
 #### Unit Testing
 - What is a unit? The smallest part that you can test.

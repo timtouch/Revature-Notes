@@ -32,4 +32,15 @@
 - Get a decent understanding about it
 
 ### Terminology
-- SoA
+- SoA (Service-Oriented Architecture)
+
+### Jersey
+<servlet-class>
+    org.glassfish.jersey.servlet.ServletContainer
+</>
+<init-param>
+<param-value>
+    jersey.config.server.provider.packages
+</>
+</>
+<load-on-startup>1</>

@@ -196,18 +196,18 @@
     - Rollsback reverts changes back to the specified SavePoint
 - Commit
     - Commits the changes which means that they cannot be reverted by rollback or by any other means
-### ACID Principles for Transactions (IMPORTANT)
-#### Atomicity
+## ACID Principles for Transactions (IMPORTANT)
+### Atomicity
 - Either everything succeeds or nothing succeeds
-#### Consistency
+### Consistency
 - Everything is in a legal state
 - You should start with a consistent state and end with a consistent state
 - EX: If you delete a parent that has child
-#### Isolation
+### Isolation
 - Transactions are independent of one another
 - You need to make sure that transactions cannot affect each other when running in parallel
 -  Isolation ensures that concurrent execution of transactions leaves the database in the same state that would've been obtained if the transactions were executed sequentially.
-##### [Transaction Isolation Levels (IMPORTANT)](https://en.wikipedia.org/wiki/Isolation_(database_systems)#Isolation_levels)
+#### [Transaction Isolation Levels (IMPORTANT)](https://en.wikipedia.org/wiki/Isolation_(database_systems)#Isolation_levels)
 
 - Defined by the following phenomena
     - **Dirty Read**
@@ -217,18 +217,18 @@
     - **Phantom Read**
         - Occurs when two same queries are executed, but rows retrieved by the two are different.
 
-###### Serializable
+##### Serializable
 -  This is the Highest isolation level. A serializable execution is guaranteed to be serializable. Serializable execution is defined to be an execution of operations in which concurrently executing transactions appears to be serially executing.
-###### Repeatable reads
+##### Repeatable reads
 - This is the most restrictive isolation level. The transaction holds read locks on all rows it references and write locks on all rows it inserts, updates, or deletes. Since other transaction cannot read, update or delete
-###### Read Committed
+##### Read Committed
 - This isolation level guarantees that any data read is committed at the moment it is read. Thus it does not allows dirty read. The transaction hold a read or write lock on the current row, and thus prevent other rows from reading, updating or deleting it.
-###### Read Uncommitted
+##### Read Uncommitted
 - Read Uncommitted is the lowest isolation level. In this level, one transaction may read not yet committed changes made by other transaction, thereby allowing dirty reads. In this level, transactions are not isolated from each other.
 
 ![Isolation Levels Table](https://www.geeksforgeeks.org/wp-content/uploads/transactnLevel.png)
 
-#### Durability
+### Durability
 - There should be no way that you can rollback once a transaction is done.
 - Transactions should be permanent
 

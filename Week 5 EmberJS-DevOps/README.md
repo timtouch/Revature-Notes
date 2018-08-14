@@ -78,23 +78,55 @@
     - `ember serve`
         - `ember s` as a short hand
 - `/dist` folder is like our target folder for java
-- Generate route
-    - `ember generate route routeName`
 - Environment Variable
      - In `environment.js`
-
 - \*.hbs (handlebars)
     - Where we can have some html content
--`app.js`
+- `app.js`
     - The heart of our project
     - Handles everything but we shouldn't need to touch on this
--`ember g model modelname`
-    - generate model
-### Model
-### Route
-### Adapter
-### Serializer
+### Useful Commands
+- **Generate Route**
+    - `ember generate route routeName`
+    - Generates the template.hbs and the route.js files
+- **Generate Model**
+    - `ember g model modelname`
+- **Generate Component**    
+    - `ember g component component-name`
+- **Generate Controller**
 
+### Routes
+- The Ember router maps the current URL to one or more route handlers. A route can do several things:
+    - It can render a template
+    - It can load a model that is then available to the template
+    - It can redirect to a new route, such as if the user isn't allowed to visit that part of the app.
+    - It can handle actions that involve changing a model or transitioning to a new route
+### Templates
+- Ember uses the [Handlebars templating library](http://www.handlebarsjs.com/) to power our app's user interface
+    - `{{data-bound-value}}`
+- Dynamic content inside a Handlebars expression is rendered with data-binding.
+    - This means if you update a property, your usage of that property in a template will be automatically updated to the latest value.
+
+### Components
+- Ember components are used to encapsulate markup and style into reusable content.
+- Components consist of two parts: a JavaScript component file that defines behavior, and its accompanying Handlebars template that defines the markup for the component's UI.
+- Components must have at least one dash (`-`) in their name. This prevents clashes with current or future HTML element names, aligns Ember components with the W3C Custom elements spec, and ensures Ember detects the components automatically
+    - EX: `blog-post` OK
+    - EX: `post` WRONG
+
+### Controllers
+- A routable object which receives a single property from the Route - `model` - which is the return value of the Route's `model()` method.
+- The model is passed from the Route to the Controller by default using the `setupController()` function. The Controller is then often used to decorate the model with display properties such as retrieving the full name from a name model.
+- A Controller is usually paired with an individual Route of the same name.
+### Models
+- Models are objects that represent the underlying data that your applicatino presents to the user Different apps will have very different models, depending on what problems they're trying to solve.
+### Adapter
+- Has the endpoints to connect to an API (REST/JSON/Other)
+- RESTAdapter
+    - JSONAdapter
+        - Much more strict
+### Serializer
+- Serializes and deserializes data retrieved through the adapter
 ### .hbs
 - `{{outlet}}`
 - `{{input value}}`
@@ -116,7 +148,7 @@
     - Sharing responsibilities between the Developers and Operators
 - It's a culture, a mindset, a meme
 - You want to deploy production code ASAP.
-- By writing small chunks of code, it increases allows one to increase the frequency of deployments
+- By writing small chunks of code, it allows one to increase the frequency of deployments
 - Improves ability to adapt to changing demands or occurring bugs
 - Need a Source Control System to help manage, track and document all of the changes to both the application code and configuration management code.
 ## Benefits of DevOps
@@ -259,7 +291,7 @@
 - `wget`
     - For downloading
 ### Folders
-- `bin`, `user`, `var` are for scripts
+- `/bin`, `/user`, `/var` are for scripts
 ### Terminal shortcuts
 - `Ctrl + l` clears the screen
 - `Ctrl + a` brings cursor to the start of the string
@@ -300,6 +332,7 @@
     - *If it doesn't work, sudo it*
     - `sudo /opt/apache-maven-3.5.4/bin/mvn install:install-file -Dfile=ojdbc8-12.0.1.jar -DgroupId="com.oracle.jdbc" -DartifactId="ojdbc8" -Dversion=12.0.1 -Dpackaging=jar
     `
+-  Other access token: 6a480fe6c39eb2ee62fb7def96b14ced8392b73c
 ### Plugins
 - Deploy to Container
 - Maven Integration
