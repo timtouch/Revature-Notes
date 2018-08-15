@@ -1,5 +1,5 @@
 # Thing to research
-- What is the difference between function and a stored procedure?
+- [What is the difference between function and a stored procedure?](https://stackoverflow.com/questions/1179758/function-vs-stored-procedure-in-sql-server)
 - What is a scalar function? An aggregate function?
 - Bonus:
     - Clustered vs Non-clustered index

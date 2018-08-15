@@ -3,8 +3,8 @@
     - What is the default?
     - How do you change to capturing?
     - How do you stop event propagation?
-
-
+- Prototype inheritance
+- Servlet Mapping in web.xml
 ---
 - Why have we switched from Desktop applications to web services?
     - For the end user, it's easier to use and less likely for them to screw something up.
@@ -21,6 +21,7 @@
     - Markup
         - Marks text to define how to read or parse it.
 - HTML Document basic
+
 ``` HTML
 <!DOCTYPE html/> <!-- Signifies the HTML standard used is HTML5-->
 <html>

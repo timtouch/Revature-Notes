@@ -89,8 +89,12 @@
 - Modular
     - All kinds of frameworks for it out there. [See Spring Frameworks](#spring-frameworks)
 
-## Configuration
-- beans.xml or have a class annotated w/ @Configuration
+### Configuration
+- By beans.xml or have a class annotated w/ @Configuration
+    - Creating Contexts
+        - ClassPathXmlApplicationContext
+        - FileSystemXMLContext
+        - XmlWebContext
 - All about bean-wiring
     - <bean>
     - component-scans
@@ -106,7 +110,7 @@
     - @Controller
     - @RESTController
 
-### Spring - AOP
+## Spring - AOP
 - [Aspect](https://docs.jboss.org/aop/1.0/aspect-framework/userguide/en/html/what.html)
     - Code that is injected
     - Cross-cutting concern
@@ -130,3 +134,69 @@
 - Configure:
     - `<aop:auto-proxy/>`
     - The last part we need before any of this stuff above, works
+### Application Context vs BeanFactory
+- An extension of the BeanFactory
+
+| BeanFactory | ApplicationContext | WebAppContext |
+| :------------- | :------------- | :------------- |
+| Beans are singletons | Prototype scope - You can have multiple different instances | Request scoped|
+| Beans are lazy loaded - beans are null objects before they are called | Eager loaded - as soon as the application starts, all the beans are initialized and loaded | Application |
+| | ClassPathXmlApplicationContext | Session |
+| | FileSystemXMLContext | Global Session |
+| | XmlWebContext | |
+
+### General Lifecycle
+- Setup
+    - Object init
+    - Handle Dependencies
+        - Beans are handled
+    - Custom Init
+    - Bean is ready
+- Teardown
+    - when container shuts down
+    - destroy object
+    - custom destroy
+
+### Bean Lifecycle
+![Spring Bean Lifecycle](https://i.stack.imgur.com/kpcdR.png)
+- Initializing Bean
+    - beans starts out as empty
+- "populate bean"
+    - With their property values
+- "if BeanNameAware"
+    - `setBeanName()`
+    - This is how it knows what we set as bean names (maybe)
+- "if BeanFactoryAware"
+    - `setBeanFactory()`
+- BeanPostProcessorPreInitialization
+    - If Spring has any other stuff for configuration
+    - `afterPropertiesSet()`
+        - You can override this method
+            - Implement one of the interfaces, and then override it
+        - custom methods (optional)
+            - Preferred way of doing this
+- BeanPostProcessorPostInitialization
+    - The final clean up stage to finish up the whole process
+    - The bean is finally ready
+        - This is where you see the bean
+- destroy() is called
+- call custom destroys
+
+## Spring MVC
+![Spring MVC](https://terasolunaorg.github.io/guideline/1.0.1.RELEASE/en/_images/RequestLifecycle.png)
+- In the context of Web Applications
+- request is sent to:
+- The Request Dispatcher
+    - The "master servlet" or "front controller"
+    - DispatcherServlet
+        - Runs a Web Application Context
+- HandlerMapping
+    - Figures out what this endpoint means to the application
+    - Once figured out, passes through the RD to the...
+- Controller
+    - Basically your servlet with your doGet() and doPost()
+    - The part we actually have to program
+    - Talks to the Beans, Services, and Repositories
+- View Resolver (Not Needed for a REST application since it only sends raw JSON data)
+    - Translate the html string to the actual document and sends it back the to front controller and that sends back a response
+    - Talks to your web app and html files
