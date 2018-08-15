@@ -113,3 +113,6 @@
 
 ## Project 3
 - All about inheriting a large code base and all the problems that come along with it
+---
+## Tips for studying
+- ABB (Always Be Building)

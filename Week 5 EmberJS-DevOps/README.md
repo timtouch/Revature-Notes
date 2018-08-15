@@ -67,16 +67,17 @@
 - Packages we need:
     - bower
     - ember-cli
-- Create a new ember project
-    - `ember new projectName`
 - `bower install packageName -sa`
     -whats -sa?
 
 ## Ember Project
-- package.json
-- Build/Start project command
+- Create new project
+    - `ember new project-name`
+- Start project command
     - `ember serve`
         - `ember s` as a short hand
+- package.json
+    - contains dependencies
 - `/dist` folder is like our target folder for java
 - Environment Variable
      - In `environment.js`
@@ -94,7 +95,7 @@
 - **Generate Component**    
     - `ember g component component-name`
 - **Generate Controller**
-
+    - `ember g controller controller-name`
 ### Routes
 - The Ember router maps the current URL to one or more route handlers. A route can do several things:
     - It can render a template
@@ -119,7 +120,7 @@
 - The model is passed from the Route to the Controller by default using the `setupController()` function. The Controller is then often used to decorate the model with display properties such as retrieving the full name from a name model.
 - A Controller is usually paired with an individual Route of the same name.
 ### Models
-- Models are objects that represent the underlying data that your applicatino presents to the user Different apps will have very different models, depending on what problems they're trying to solve.
+- Models are objects that represent the underlying data that your application presents to the user. Different apps will have very different models, depending on what problems they're trying to solve.
 ### Adapter
 - Has the endpoints to connect to an API (REST/JSON/Other)
 - RESTAdapter
@@ -290,8 +291,10 @@
 - `curl`
 - `wget`
     - For downloading
+
 ### Folders
 - `/bin`, `/user`, `/var` are for scripts
+
 ### Terminal shortcuts
 - `Ctrl + l` clears the screen
 - `Ctrl + a` brings cursor to the start of the string
@@ -327,7 +330,7 @@
 ## Jenkins
 - A CI Automation tool
 - We can have a dedicated server for Jenkins or have it on the same server
-- Acces Token for Github:  9a87dc1c18f4f4c7847b9b0e0d03f4a14d83d5fb
+- Access Token for Github:  9a87dc1c18f4f4c7847b9b0e0d03f4a14d83d5fb
 - Install the maven to where Jenkins can see it
     - *If it doesn't work, sudo it*
     - `sudo /opt/apache-maven-3.5.4/bin/mvn install:install-file -Dfile=ojdbc8-12.0.1.jar -DgroupId="com.oracle.jdbc" -DartifactId="ojdbc8" -Dversion=12.0.1 -Dpackaging=jar

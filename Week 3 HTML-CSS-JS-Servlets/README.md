@@ -1,3 +1,11 @@
+# Gaps in knowledge
+- Bubbling vs Capturing
+    - What is the default?
+    - How do you change to capturing?
+    - How do you stop event propagation?
+
+
+---
 - Why have we switched from Desktop applications to web services?
     - For the end user, it's easier to use and less likely for them to screw something up.
 
@@ -78,6 +86,15 @@
 #### Just in time (JIT) compiler
 - At runtime, the engine sees your code run and sees repetitive instructions running and saves these as assembly language so that if you call it again, it can recognize that and recall the saved instructions making it much faster.
 
+#### JavaScript Datatypes
+- Boolean
+- Null
+- Undefined
+- Number
+- String
+- Symbol (new in ECMAScript  2015)
+- Object
+
 #### `var` keyword
 ``` JavaScript
 var =   arrays
@@ -149,6 +166,7 @@ var x = 5;
         3: loading - almost done, partial complete request
         4: done
 ```
+
 # Java Servlet
 - Nothing more than a Java object that handles protocols, mainly http protocol requests.
 - A middleman of sorts so clients can't have direct access to the database for security purposes

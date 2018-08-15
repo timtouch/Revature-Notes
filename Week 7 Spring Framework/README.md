@@ -58,6 +58,75 @@
 - Spring Beans (Important)
 - etc...
 
-
 ## More on Spring
 - Like the Session in Hibernate, it watches for changes of
+
+## Spring Features
+- It's lightweight
+    - It's like under 1 MB
+- Inversion of Control (IoC)
+    - Having the programmer give up control over parts of their code.
+    - By using Dependency Injection (DI)
+        - Usually, you'd have to create the objects, then pass it to another object through their constructor or setter
+        - *bean-wiring*
+            - Constructor Injection
+            - Setter Injection
+            - Autowiring
+                - Letting Spring take control and use the most conventional way for DI
+                - You can wire it by:
+                    - Type (default)
+                    - Name
+    - Changes to classes don't propagate further than the place that handles the DI
+- Aspect Oriented Programming (AOP)
+    - About taking secondary, tangential, created code that isn't directly related with the business logic and separating them.  In other words, it's about separating your business logic from your secondary code.
+        - Secondary Code Includes:
+            - Logging
+            - Exception Handling
+            - Security
+- Bean Container
+    - The Context object that registers and maintains all of your beans
+    - In charge of your beans life-cycle
+- Modular
+    - All kinds of frameworks for it out there. [See Spring Frameworks](#spring-frameworks)
+
+## Configuration
+- beans.xml or have a class annotated w/ @Configuration
+- All about bean-wiring
+    - <bean>
+    - component-scans
+    - aop-scans
+        - The scans are scanning for annotations
+- Stereotypes
+    - @Component
+        - The most generic type
+        - Specializations:
+            - @Service
+            - @Repository
+        - The Specializations has a few additional features that come with it.
+    - @Controller
+    - @RESTController
+
+### Spring - AOP
+- [Aspect](https://docs.jboss.org/aop/1.0/aspect-framework/userguide/en/html/what.html)
+    - Code that is injected
+    - Cross-cutting concern
+        - Something that cuts across your business logic code, but not necessarily related to the flow of that application
+- AOP:
+    - injecting aspects when needed
+- JoinPoint:
+    - The method where the aspect is injected
+- Pointcut:
+    - execution point
+    - How you find that method
+        - You can specify which method(s) to choose. By class, package, return type, arguments,partial method name matching
+- Advice:
+    - These are your annotations:
+        - @Before
+        - @After
+        - @AfterReturning
+        - @AfterThrowing
+        - @Around - Most powerful
+    - Generally want to use from order of least powerful to most powerful
+- Configure:
+    - `<aop:auto-proxy/>`
+    - The last part we need before any of this stuff above, works

@@ -1,3 +1,16 @@
+# Additional Things to Study
+- [Range of Topics to study for Java](https://www.geeksforgeeks.org/java/)
+- Know String methods
+- Know Collection Interface and their methods and differences (Hashmap and Hashtable)
+    - List
+    - Queue
+    - Set
+- [JVM vs JRE vs JDK](https://www.geeksforgeeks.org/differences-jdk-jre-jvm/)
+- Knowing about reading and writing files 
+- Bonus:
+    - Comparator vs Comparable
+    - Collections Class vs Collection Interface
+---
 1. Can volunteer to give presentations of the technologies that we are learning
 2. We have interviews every week
 ##### OCA - Java Programmer 1
@@ -5,8 +18,6 @@
 - You will get reimbursed only IF you pass.
 ##### ENTHUWARE
 - Use this to practice for the OCA.
-
-
 
 # Java
 - OOP
@@ -70,15 +81,15 @@
 ### Primitive Data Types
 - Data types that exists outside of an object
   - Integer types:
-    - byte - 8 bits (-128 to 127)
-    - short -16 bits (-2^15 to 2^15 - 1)
-    - int - 32 bits (-2^31 to 2^31 - 1)
-    - long - 64 bits (-2^63 to 2^63 - 1)
+    - *byte* - 8 bits (-128 to 127)
+    - *short* -16 bits (-2^15 to 2^15 - 1)
+    - *int* - 32 bits (-2^31 to 2^31 - 1)
+    - *long* - 64 bits (-2^63 to 2^63 - 1)
   - Floating point types:
-    - float - 16 bits
-    - double - 32 bits
+    - *float* - 16 bits
+    - *double* - 32 bits
   - Characters:
-    - char - 16 bits
+    - *char* - 16 bits
   - Booleans:
     - true/false
 
@@ -99,10 +110,11 @@
 - A class used to "wrap" around something.
 - Integer, Double
 - Why do this?
-  - They can give you a lot of useful methods such as parseInt()
-  - **Autoboxing**
-    - Whenever Java can see an opportunity to convert something, it will wrap the primitives in their respective wrapper class
-
+    - They can give you a lot of useful methods such as parseInt()
+    - **Autoboxing**
+        - Whenever Java can see an opportunity to convert something, it will wrap the primitives in their respective wrapper class
+    - **Unboxing**
+        -
 #### Object-instance
 - An object is some instance in memory of a data type with field/members/variables representing state and functions/methods to control it
 

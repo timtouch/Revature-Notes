@@ -1,3 +1,9 @@
+# Thing to research
+- What is the difference between function and a stored procedure?
+- What is a scalar function? An aggregate function?
+- Bonus:
+    - Clustered vs Non-clustered index
+
 ## Little notes on working on a deadline (Development Life cycle)
 - Spend ~90% of the time planning how you are going to accomplish the task, then spend the last 10% building the application.
 - Using Interfaces to help build the skeleton of the project based on the UML diagram.
@@ -22,8 +28,6 @@
 - It's gotta be persisted
 - It's gotta be accessible by more than one machine
 - Make sure that changes to files are not completely overridden by someone else
-
-
 
 ### RDBMS (Relational Database Management System)
 - User (SQL Commands)--> Oracle Database(Gatekeeper to files) --> Files   

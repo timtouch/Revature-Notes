@@ -49,7 +49,7 @@
 | :------------- | :------------- |
 | You get the related objects immediately from tables | Get Proxies (Stand-ins) to stand in for related objects **UNTIL** needed |
 | **get** - hits the DB and returns null if no row found | **load** - Always returns a *proxy* without hitting the DB. |
-| **save** - returns the *Serializable* value of this identifier  | **persist** - `void` return type. INSERT generation occurs only upon committing the transaction, flushing, or closing the session |
+| **save** - returns the *Serializable* value of this identifier. Calling again with the same passed object is detached results in duplicate rows.  | **persist** - `void` return type. INSERT generation occurs only upon committing the transaction, flushing, or closing the session. Passed object is now in persistent state. |
 | **update** - `void` return type, acts upon the passed object | **merge** - returns newly updated instance, the passed in object should be discarded |
 
 [More on save, persist, update, and merge](http://www.baeldung.com/hibernate-save-persist-update-merge-saveorupdate)
@@ -136,6 +136,33 @@ Hibernate is always listening for changes to the objects persisted:
     - `@AttributeOverride(name="nameOfProperty", column=@Column(name = "NEW_NAME"))`
 - `@NamedQueries`
     - `@NamedQuery`
+
+### hibernate.cfg.xml file
+``` XML
+<hibernate-configuration>
+    <session-factory>
+        <!--url, username, password, driver_class-->
+        <property name="">
+        </>
+        <!-- "resource" maps to *.hbm.xml file-->
+        <mapping resource="*.hbm.xml"/>
+        <!-- "class" maps to properly annotated Entity class -->
+        <mapping class="com.revature.domain.Bear"/>
+    </>
+</>
+```
+
+### \*.hbm.xml file
+``` XML
+<hibernate-mapping>
+    <class name="name.of.Class" table="TABLE_NAME">
+        <id name="idNameInClass" column="COLUMN_NAME_IN_TABLE">
+            <generator class="increment"/>
+        </>
+    </>
+    <property name="nameInClass" column="COLUMN_NAME_IN_TABLE"/>
+</>
+```
 ##### Convention over configuration
 - Because there are certain conventions for writing code or databases, we don't have to worry about configuration
 
