@@ -33,7 +33,7 @@
 - The Solution
     - Spring sets up all of the fluff for us so we don't have to write it ourselves and focus on the meat
 - The Goal:
-    - The goal is to completely decouple your source code.
+    - The goal is to completely decouple your source code. Let Spring handle the DI, itself
 - The Spring Container
     - It is tracking the connections, creating the objects, and managing the life cycle of those objects
 - How does it do it?
@@ -42,7 +42,7 @@
         - You have to be careful on how you annotate as you can create security flaws
 ## Spring Frameworks
 - Spring Cloud
-- Spring AOP (Important)
+- Spring AOP (IMPORTANT)
     - Aspect Oriented Programming
     - Aspect Class
         - Has rules with a super try
@@ -51,11 +51,12 @@
 - Spring Data
 - Spring REST
 - Spring REST Data
-- Spring Core (Important)
+- Spring Core (IMPORTANT)
     - Handling Dependency Injection
 - Spring MVC
 - Spring Security
-- Spring Beans (Important)
+- Spring Context (IMPORTANT)
+- Spring Beans (IMPORTANT)
 - etc...
 
 ## More on Spring
@@ -96,7 +97,7 @@
         - FileSystemXMLContext
         - XmlWebContext
 - All about bean-wiring
-    - <bean>
+    - \<bean\>
     - component-scans
     - aop-scans
         - The scans are scanning for annotations
@@ -113,7 +114,7 @@
 ## Spring - AOP
 - [Aspect](https://docs.jboss.org/aop/1.0/aspect-framework/userguide/en/html/what.html)
     - Code that is injected
-    - Cross-cutting concern
+    - *Cross-cutting concern*
         - Something that cuts across your business logic code, but not necessarily related to the flow of that application
 - AOP:
     - injecting aspects when needed
@@ -157,30 +158,30 @@
     - destroy object
     - custom destroy
 
-### Bean Lifecycle
+### Bean Lifecycle *IMPORTANT*
 ![Spring Bean Lifecycle](https://i.stack.imgur.com/kpcdR.png)
-- Initializing Bean
+1. Initializing Bean
     - beans starts out as empty
-- "populate bean"
+2. "populate bean"
     - With their property values
-- "if BeanNameAware"
+3. "if BeanNameAware"
     - `setBeanName()`
     - This is how it knows what we set as bean names (maybe)
-- "if BeanFactoryAware"
+4. "if BeanFactoryAware"
     - `setBeanFactory()`
-- BeanPostProcessorPreInitialization
+5. BeanPostProcessorPreInitialization
     - If Spring has any other stuff for configuration
     - `afterPropertiesSet()`
         - You can override this method
             - Implement one of the interfaces, and then override it
         - custom methods (optional)
             - Preferred way of doing this
-- BeanPostProcessorPostInitialization
+6. BeanPostProcessorPostInitialization
     - The final clean up stage to finish up the whole process
     - The bean is finally ready
         - This is where you see the bean
-- destroy() is called
-- call custom destroys
+7. destroy() is called
+8. call custom destroys
 
 ## Spring MVC
 ![Spring MVC](https://terasolunaorg.github.io/guideline/1.0.1.RELEASE/en/_images/RequestLifecycle.png)
@@ -200,3 +201,8 @@
 - View Resolver (Not Needed for a REST application since it only sends raw JSON data)
     - Translate the html string to the actual document and sends it back the to front controller and that sends back a response
     - Talks to your web app and html files
+
+### 3 Major Beans for Hibernate ORM
+- Data Source
+- SessionFactory
+- Transaction Manager
