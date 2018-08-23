@@ -15,7 +15,7 @@
         - Update the data
     - DELETE
         - Delete the data
-2. **Client-Server**
+2. **Client-Server Separation**
 - A REST service has all connections between a client and a server
 3. **Stateless**
 - It should not have something that care or maintains anything about the *client*. It just cares about getting the request and sending the proper response.

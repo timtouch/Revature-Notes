@@ -116,3 +116,14 @@
 ---
 ## Tips for studying
 - ABB (Always Be Building)
+---
+## Tips for Acing QC
+- Use a ton of buzz words
+- Expand upon your answer, however don't stray too far from the question
+    - Try not to answer sparsely
+    - Shock and awe
+        - Spew out all you can relate to the topice
+- For coding stuff, describe as if you we hovering right over them, explaining it.
+
+- Look up:
+    - Impromptu speaking
