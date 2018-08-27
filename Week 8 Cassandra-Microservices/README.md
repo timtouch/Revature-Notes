@@ -148,7 +148,7 @@
     - You can have many different properties file for each environment (testing, development, production) and this can make it easier to switch them out
 - Imagine having a private repo containing all your sensitive username/password information and having the Config Service grab that information for you
 
-### Hystrix
+### [Hystrix](https://github.com/Netflix/Hystrix/wiki)
 - Latency + Fault Tolerance (Exceptions) (Circuit Breaker)
     - Latency
         - Handling what happens when something is taking too long
@@ -162,3 +162,81 @@
     - It also collects metrics and presents them to you in a graph
     - These failing events happen much faster than what we can normally observe in real time. But Hystrix tracks these things and displays it in a human readable manner.
 - Actuator? What is that?
+
+### Cassandra
+- Databases can get hit hard with requests
+- But reads are pretty simple and straight forward
+- You want to scale this up
+    - You have a queue that stores incoming requests
+    - The requests are handled in the order that they are queued
+    - That way, the request doesn't have to immediately be executed
+    - Allows us to decouple the request handler and the database, all
+- BASE transactions
+    - Basic Availability
+        - Your database is generally available
+    - Soft State
+        - You database in not in a truly consistent state
+        - You may have foreign keys that don't actually exist in the same DB, but it will eventually be "joined" with another table
+    - Eventual consistency
+        - Eventually, your database will be consistent
+- During the sending of data, for whatever reason, a bank or microservice or queue goes down, they are persistently stored so they can bounce back
+- So what are we using for the queue?
+- JMS (Java messaging service)
+- Advanced Messaging Queue Protocol (AMQP)
+    - A protocol is a standardized set of rules for communication
+    - A standardized way of creating a binary stream of data
+    - A stream is different from sending requests back and forth
+    - Turns all this information into a data stream
+    - And sends it to a message broker that determines what to do with the data
+    - Rabbit MQ
+        - Has a guarantee that each message may be read at least once
+            - Or at most once. Your choice
+    - Qpid
+        - Used in JPMC
+        - Runs on Erlang
+        - Has a web app to manager the controller
+- Apache Kafka
+    - Another messaging queue but doesn't use AMQP
+- Main parts of Messaging Queues (Publisher/Subscriber method)
+    - Exchange (One) (The message broker)
+        - Manages the queues
+        - Rabbit will send requests to the Exchange
+        - Exchange will send it to a Queue
+    - Queue (Many)
+        - Handles the request in the order they arrived
+        - Multiple copies of Microservices will read the same queue (The subscribers)
+        - Generally keep each queue to a specific microservice type
+- NoSQL
+    - Non-relational databases (There are many kinds)
+    - Sometimes, relational databases are not what you want
+    - Different kinds:
+        - Forms:
+            - MongoDB
+            - Good for things like news sites and blogs
+            - No concerns for restrictions and empty fields
+        - columnar:
+            - Cassandra
+            - What looks like a row table, but of varying column lengths
+                - These columns have their own rows of information
+            - CQL
+                - Very similar to SQL but be aware that it is not SQL
+            - Distributed among many nodes
+                - It's not just one silo of data, there are many different nodes
+                - Using a hash function to determine which silo the data may be in
+                - Or replicating data among themselves
+            - CAP Theorem
+                - Consistent
+                    - Giving up Consistency for Availability
+                    - Replication Factor
+                        - When changes are made to one silo, it talks to N other silos and copy that information to other nodes(silos)
+                        - In Cassandra, you can choose the replication factor for each transaction
+                - Availability
+                    - Available for read/writes in
+                - Partitioned
+                    - Database is split
+                - The theorem says: "Pick two"
+                    - Cassandra and many other similar databases choose Availability and Partition
+                    - But the application can wander around, and change which 2
+                - Protecting against fraud
+                    - Cassandra can stream information quickly, so they can do fraud detection in real time
+                    - If you make a change in one place and it sees that someone made a charge on the same card in a different state, it can real time, calculate the velocity that is needed for the person to travel to make it and if it is implausible, then the alarms start ringing

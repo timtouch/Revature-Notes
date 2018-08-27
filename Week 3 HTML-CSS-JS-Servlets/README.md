@@ -149,7 +149,7 @@ var x = 5;
     - send(): sends an http message (Call this last, it sends the request)
     - open(httpVerb, uri) (Call this to configure a request)
         - httpVerb
-            - GET, PUT, POST, DELETE
+            - GET, PUT, POST, DELETEf
         - uri
             - uniform resource identifier
     - onreadystatechage
@@ -203,7 +203,7 @@ var x = 5;
 - javax.servlet/javax.http
     - servlet interface -> generic servlet (abstract) -> httpservlet  (abstract)-> yourservlet (extends) (override: doGet, doPost)
 
-####IMPORTANT
+#### IMPORTANT
 1. init() - initialize the servlet x1
 2. service() - calls a series of other servlets x(infinity)
 3. destroy() - destroys the servlet x1

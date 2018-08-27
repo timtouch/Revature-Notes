@@ -1,12 +1,21 @@
 # Additional Things to Study
 - [Range of Topics to study for Java](https://www.geeksforgeeks.org/java/)
 - Know String methods
-- Know Collection Interface and their methods and differences (Hashmap and Hashtable)
+    - substring()
+    - toLowerCase()/toUpperCase()
+    - startsWith()
+    - endsWith()
+    - charAt()
+    - split()
+    - trim()
+    - length()
+    - indexOf()
+- Know [Collection](https://www.geeksforgeeks.org/collections-in-java-2/) Interface and their methods and differences (Hashmap and Hashtable)
     - List
     - Queue
     - Set
 - [JVM vs JRE vs JDK](https://www.geeksforgeeks.org/differences-jdk-jre-jvm/)
-- Knowing about reading and writing files 
+- Knowing about reading and writing files
 - Bonus:
     - Comparator vs Comparable
     - Collections Class vs Collection Interface
@@ -226,3 +235,14 @@
 - How to compile your project?
  - Where the pom.xml exists
     -`mvn package`
+##### A Build Lifecycle is Made Up of Phases
+- Maven is based around the central concept of a build lifecycle. What this means is that the process for building and distributing a particular artifact (project) is clearly defined.
+###### Phases
+- clean
+- validate
+- compile
+- test
+- package
+- verify
+- install
+- deploy

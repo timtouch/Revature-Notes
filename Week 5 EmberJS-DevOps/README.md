@@ -1,3 +1,6 @@
+# Panel Stuff
+- **Exception handling in Ember???**
+
 ### JRE
 - JVM + javalibs
 

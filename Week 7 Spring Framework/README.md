@@ -1,3 +1,5 @@
+# Panel Stuff
+- **Exception handling in Spring**
 # What I Don't Know
 - Spring Boot
     - Spring Boot is a project that is autoconfigured and has runs on it's own Tomcat Server
