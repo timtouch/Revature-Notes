@@ -14,9 +14,9 @@ These are notes that I've accumulated over the course of my training
 ## Week 6 REST
 - [REST](https://github.com/timtouch/Revature-Notes/blob/master/Week%206%20REST/README.md)
 ## Week 7 Spring Framework
-- Spring Framework
+- [Spring Framework](https://github.com/timtouch/Revature-Notes/tree/master/Week%207%20Spring%20Framework)
 ## Microservice Architecture
-- MSA (Microservice Architecture)
+- [MSA (Microservice Architecture)](https://github.com/timtouch/Revature-Notes/tree/master/Week%208%20Cassandra-Microservices)
 
 ---
 
