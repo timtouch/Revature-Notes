@@ -212,9 +212,9 @@ What is AJAX?
 What are the different states of AJAX?
 what is the object we use for AJAX in javascript?
 What triggers the different state changes?
-What is the name of hte property detecting state changes?
+What is the name of the property detecting state changes?
 How do I use javascript for form validation?
-How do I use AJAX to hti a servlet? How do I received a JSON back?
+How do I use AJAX to hit a servlet? How do I received a JSON back?
 What is variable hoisting
 truthy/falsey
 What are the different javascript errors
@@ -226,7 +226,7 @@ What is grep, yum, man?
 Explain basic Unix commands for file creation and directory navigation
 What is VIM?
 How do I change file permissions?
-How do I create local enviroment variables and global environment variables?
+How do I create local environment variables and global environment variables?
 What is AWS?
 What is the cloud?
 What is an EC2, AMI, IAM, RDS, EBS, S3, Route 53, VPC, ELB, auto-scaling groups?
@@ -255,7 +255,7 @@ Where is hibernate configured (xml wise?)
 How are objects mapped (xml wise?)
 How is hibernate configured (Annotation wise)
 How are objects mapped (Annotation wise)
-What is the different between lazy laoding and eager fetching? What is default in hibernate?
+What is the different between lazy loading and eager fetching? What is default in hibernate?
 What is the difference between get and load?
 save vs persist?
 merge vs update?
@@ -273,7 +273,7 @@ What is a webservice?
 What is REST?
 What are the constraints of REST?
 What are the different HTTP methods?
-Which ones are safe and idompotent?
+Which ones are safe and idempotent?
 What is Jersey?
 what is JAX_RS?
 What is Postman?
@@ -281,4 +281,15 @@ What is a media type?
 what are the different media types?
 how do you consume/expose REST? (IE setup the application for REST server and client)
 How do you handle excpetions with REST?
+-------------------
+-----EMBER JS------
+-------------------
+- How do you do Exception Handling?
+-------------------
+------SPRING-------
+-------------------
+- How do you do Exception Handling?
+-------------------
+---MICROSERVICES---
+-------------------
 ```

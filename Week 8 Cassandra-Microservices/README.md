@@ -68,7 +68,7 @@
         - Always changing as service location change as well
     - **Load balancer** (Ribbon)
         - Doesn't bombard a particular server with requests and spreads it out
-    - **Gateway service**
+    - **Gateway service** (Zuul)
         - The part that is exposed to the world that makes it seem like these interconnect services are actually one application
         - Good place to have filters and security
     - **Message brokers**
@@ -224,7 +224,9 @@
                 - It's not just one silo of data, there are many different nodes
                 - Using a hash function to determine which silo the data may be in
                 - Or replicating data among themselves
-            - CAP Theorem
+            - **CAP Theorem**
+                - [Link 1](http://robertgreiner.com/2014/08/cap-theorem-revisited/)
+                - [Link 2](https://towardsdatascience.com/cap-theorem-and-distributed-database-management-systems-5c2be977950e)
                 - Consistent
                     - Giving up Consistency for Availability
                     - Replication Factor

@@ -93,8 +93,8 @@
 - Undefined
 - Number
 - String
-- Symbol (new in ECMAScript  2015)
 - Object
+- Symbol (new in ECMAScript  2015 therefore probably optional)
 
 #### `var` keyword
 ``` JavaScript

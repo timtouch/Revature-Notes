@@ -97,9 +97,9 @@ Hibernate is always listening for changes to the objects persisted:
 | :------------- | :------------- |
 | Connection | Configuration       |
 | ResultSet | Session Factory |
-| PreparedStatement | Session |
-| CallableStatement | Transaction |
-| | Query |
+| Statement | Session |
+| SQLException | Transaction |
+|  | Query |
 | | Criteria |
 
 ## Hibernate

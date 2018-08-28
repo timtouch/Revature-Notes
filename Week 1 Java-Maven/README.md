@@ -16,9 +16,11 @@
     - Set
 - [JVM vs JRE vs JDK](https://www.geeksforgeeks.org/differences-jdk-jre-jvm/)
 - Knowing about reading and writing files
+    - FileInputStream vs FileReader vs BufferedReader
 - Bonus:
     - Comparator vs Comparable
     - Collections Class vs Collection Interface
+
 ---
 1. Can volunteer to give presentations of the technologies that we are learning
 2. We have interviews every week
