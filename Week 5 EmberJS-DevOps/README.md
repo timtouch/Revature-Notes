@@ -333,12 +333,10 @@
 ## Jenkins
 - A CI Automation tool
 - We can have a dedicated server for Jenkins or have it on the same server
-- Access Token for Github:  9a87dc1c18f4f4c7847b9b0e0d03f4a14d83d5fb
 - Install the maven to where Jenkins can see it
     - *If it doesn't work, sudo it*
     - `sudo /opt/apache-maven-3.5.4/bin/mvn install:install-file -Dfile=ojdbc8-12.0.1.jar -DgroupId="com.oracle.jdbc" -DartifactId="ojdbc8" -Dversion=12.0.1 -Dpackaging=jar
     `
--  Other access token: 6a480fe6c39eb2ee62fb7def96b14ced8392b73c
 ### Plugins
 - Deploy to Container
 - Maven Integration
