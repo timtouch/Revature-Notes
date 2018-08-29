@@ -41,7 +41,7 @@
 
 ## Ember objects
 ### Router
-- It's job is to bring all the moving parts together
+- It maps the URL in your application to the routes that you've defined.
 - Has multiple routes
     - **Route**
         - The individual view or section that you define
@@ -57,6 +57,25 @@
             - **template** *
                 - The equivalent to your view
                 - A reusable section of code
+## Routes
+- It is responsible for displaying templates, loading data, and setting up application state
+## Templates
+-
+## Controllers
+- A routable object which receives a single property from the Route - `mode` - which is the return value of the Route's `model()` method.
+## Models
+- Objects that represent the underlying data that your application presents to the user.
+## Components
+- Used to encapsulate markup and style into reusable content.
+- Consists of two parts: a JS component file that defines behavior, and its accompanying Handlebars template that defines the markup for the component's UI.
+## Helpers
+- Can develop helpers that make it simple to output variable into your brower's console, or activate the debugger from your templates.
+## Adapters
+- Determines how data is persisted to the backend data store. Things such as the backend host, URL format, and headers used to talk to a REST API can all be configured in an adapter.
+## Serializers
+- Format the data sent to and received from the backend store.
+
+
 ### Data-binding
 #### Ember expressions
 - `{{varName}}`

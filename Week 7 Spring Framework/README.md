@@ -163,7 +163,7 @@
         - @Around - Most powerful
     - Generally want to use from order of least powerful to most powerful
 - Configure:
-    - `<aop:auto-proxy/>`
+    - `<aop:aspectj-autoproxy/>`
     - The last part we need before any of this stuff above, works
 ### Application Context vs BeanFactory
 - Both manage the Bean Lifecycle
@@ -216,6 +216,7 @@
 
 # Spring MVC
 ![Spring MVC](https://cdn-images-1.medium.com/max/629/1*YZ-MfuEX-GwjLjyv9CLDbg.jpeg)
+- <mvc:annotation-driven>
 - In the context of Web Applications
 - request is sent to:
 - The Request Dispatcher
