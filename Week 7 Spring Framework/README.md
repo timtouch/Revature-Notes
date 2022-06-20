@@ -140,6 +140,7 @@
         - The Specializations has a few additional features that come with it.
     - @Controller
     - @RESTController
+    - [@RestController vs @Controller](https://www.geeksforgeeks.org/difference-between-controller-and-restcontroller-annotation-in-spring/)
 
 # Spring - AOP
 - [Aspect](https://docs.jboss.org/aop/1.0/aspect-framework/userguide/en/html/what.html)
